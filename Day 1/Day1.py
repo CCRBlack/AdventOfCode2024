@@ -11,11 +11,15 @@ if rawInput:
     # Split the input into lines
     lines = rawInput.split('\n')
 
-    # Split each line into left and right 5 characters and convert to integers
+    #Split each line into left and right 5 characters and convert to integers
     list1 = sorted([int(line[:5]) for line in lines if line[:5].strip().isdigit()])
     list2 = sorted([int(line[5:]) for line in lines if line[5:].strip().isdigit()])
 
-    # Assuming the lists are the same length
+    #Find the sum of the differences between each pair of values
     difference = sum(abs(l1 - l2) for l1, l2 in zip(list1, list2))
 
+    #Calculate the similarity score: the number of times every line1 value appears in list2 times it's value.
+    simlarityScore = sum(list2.count(l) * l for l in list1)
+
     print("Total difference is: " + str(difference))
+    print("Simlarity score is: " + str(simlarityScore))
