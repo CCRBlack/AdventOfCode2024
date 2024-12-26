@@ -10,3 +10,6 @@ Part 2 is to calculate the so called "similarity score" between the two lists: t
 Part 1 is to count the number of lines in which all numbers, separated by a space, are consecutively ascending or descending by a value between 1 and 3 inclusive.
 
 Part 2 calculates how many reports can be made safe if a single number is removed from the sequence.
+
+### Day 3: Mull It Over
+Part 1 is to clean up a 'corrupted'file by ony recognising correct terms.
