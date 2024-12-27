@@ -8,13 +8,23 @@ except FileNotFoundError:
     print("File not found. Please check the file path.")
     rawInput = ""
 
-
 if rawInput:
-    # Use regex to extract only the "mul(000,111)" values where 000 and 111 are 1-3 digit numbers
-    goodInstructions = re.findall(r'mul\(\d{1,3}\,\d{1,3}\)', rawInput)
-    
-    # Sum all the multiplication instructions
+    # Keep only tokens that are allowed
+    allowedTokens = re.findall(r"do\(\)|don't\(\)|mul\(\d{1,3},\d{1,3}\)", rawInput)
+
+    # Initialize the variables
+    enabled = True # Start with enabled
     totalMul = 0
-    for i in range(len(goodInstructions)):
-        totalMul = totalMul + (int(goodInstructions[i].split('(')[1].split(',')[0]) * int(goodInstructions[i].split(',')[1].split(')')[0]))
-    print("Sum of multiplications: " + str(totalMul))
+
+    for token in allowedTokens:
+        if token == "do()":
+            enabled = True
+        elif token == "don't()":
+            enabled = False
+        else:
+            if enabled:
+                # Extract the numbers from the mul instruction and add to the running total
+                nums = token.split('(')[1].split(')')[0].split(',')
+                totalMul += int(nums[0]) * int(nums[1])
+    
+    print("Sum of multiplications:", str(totalMul))
