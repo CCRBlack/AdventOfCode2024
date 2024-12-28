@@ -11,7 +11,10 @@ Part 1 is to count the number of lines in which all numbers, separated by a spac
 
 Part 2 calculates how many reports can be made safe if a single number is removed from the sequence.
 
-### Day 3: Mull It Over
+## Day 3: Mull It Over
 Part 1 is to clean up a 'corrupted' file by ony recognising correct terms `mul(000,111)` using simple regex where both terms in the instruction are 1-3 digit integers.
 
 Part 2 requires instructions to be ignored if preceded by a `dont()` instruction, ignore all instructions until a `do()` is detected. The starting state is `do()`. Only the last occurrence counts.
+
+## Day 4: Ceres Search
+Part 1 is to find all instances of a word "XMAS" in a crossword. The word could be horizontal, vertical, diagonal, written backwards, or even overlapping other words.
