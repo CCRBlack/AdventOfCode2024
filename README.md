@@ -17,4 +17,9 @@ Part 1 is to clean up a 'corrupted' file by ony recognising correct terms `mul(0
 Part 2 requires instructions to be ignored if preceded by a `dont()` instruction, ignore all instructions until a `do()` is detected. The starting state is `do()`. Only the last occurrence counts.
 
 ## Day 4: Ceres Search
-Part 1 is to find all instances of a word "XMAS" in a crossword. The word could be horizontal, vertical, diagonal, written backwards, or even overlapping other words.
+Part 1 requires finding all instances of a word "XMAS" in a crossword. The word could be horizontal, vertical, diagonal, written backwards, or even overlapping other words.
+
+Part 2 requires finding all instances of the two "MAS" crossing each other.
+
+## Day 5: Print Queue
+Part 1 requires ordering numbers according to input logic which defines A before B.
